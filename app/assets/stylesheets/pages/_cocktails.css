@@ -1,0 +1,14 @@
+body {
+  background-color: #403233;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.drinks_button {
+  display: block;
+  margin: 10px auto;
+  width: 20%;
+}

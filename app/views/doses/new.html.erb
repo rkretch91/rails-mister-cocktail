@@ -1,5 +1,10 @@
-<%= simple_form_for [@cocktail, @dose] do |d| %>
-  <%= d.input :description %>
-  <%= d.association :ingredient %>
-  <%= d.button :submit %>
-<% end %>
+<div class="row forms">
+  <div class="col-xs-4 col-xs-offset-4">
+    <h1>add a new dose and ingredient!</h1>
+    <%= simple_form_for [@cocktail, @dose] do |d| %>
+      <%= d.association :ingredient %>
+      <%= d.input :description, label: "how much do you want to add?", placeholder: "e.g. 2 shots, 2 oz." %>
+      <%= d.button :submit %>
+    <% end %>
+  </div>
+</div>

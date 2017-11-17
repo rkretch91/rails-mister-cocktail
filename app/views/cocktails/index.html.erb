@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,.2) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "home-banner.jpg" %>');">
+<div class="banner parallax" style="background-image: linear-gradient(-225deg, rgba(0,101,168,.2) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "home-banner.jpg" %>');">
   <div class="banner-content">
     <h1>when <i class="fa fa-glass" aria-hidden="true"></i> makes you sleepy, add <i class="fa fa-coffee" aria-hidden="true"></i></h1>
     <%= link_to "add a kawfee cocktail", new_cocktail_path, {class: "btn btn-danger drinks_button btn-lg"} %>
@@ -7,13 +7,14 @@
   <div class="container">
     <div class="row">
       <% @cocktails.each do |c| %>
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-6 col-md-4">
+        <%= link_to cocktail_path(c) do  %>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('<%= cl_image_path c.photo.path, height: 300, width: 300, crop: :fill %>')">
-          <%= link_to c.name, cocktail_path(c), {class: "card-link"} %>
           <div class="card-description">
             <h2><%= c.name %></h2>
           </div>
         </div>
+        <% end %>
       </div>
       <% end %>
     </div>

@@ -1,4 +1,4 @@
-.card {
+.card-show {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
@@ -7,6 +7,43 @@
   position: relative;
   margin: 10px 0;
   border-radius: 15px 50px 50px ;
+}
+
+.card-show p {
+  color: #403233;
+  text-shadow: none;
+  text-align: center;
+}
+
+.card-show-link {
+  text-align: center;
+  color: #403233;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-shadow: none;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.card-link-center {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.card-show h2 {
+  text-align: center;
+  color:#403233;
+  text-shadow: none;
 }
 .card-user {
   position: absolute;
@@ -44,7 +81,4 @@
   z-index: 2;
   background: black;
   opacity: 0;
-}
-.card:hover {
-  opacity: 0.5;
 }

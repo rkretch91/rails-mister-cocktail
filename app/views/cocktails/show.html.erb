@@ -4,19 +4,20 @@
   </div>
 </div>
 <div class="container">
-<div class="row">
-<p><% @cocktail.doses.each do |d| %></p>
-<div class="col-xs-6 col-md-4 col-md-offset-4"></div>
-<div class="card" style="background-color: white; margin: 0 20px;">
-  <p><%= d.description + " " + d.ingredient.name %></p>
-  <%= link_to "delete dose", dose_path(d), method: :delete, data: { confirm: "Are you sure you want to delete?"} %>
+  <div class="row">
+    <div class="col-xs-6 col-md-4 col-md-offset-4"></div>
+     <div class="card-show" style="background-color: white; margin: 0 20px;">
+      <h2>Ingredients</h2>
+        <p><% @cocktail.doses.each do |d| %></p>
+        <p><%= d.description + " " + d.ingredient.name + " " %>
+        <%= link_to "x", dose_path(d), method: :delete, data: { confirm: "Are you sure you want to delete?"} %></p>
+        <p><% end %></p>
+        <%= link_to "add dose", new_cocktail_dose_path(@cocktail), class: "card-show-link"  %><br>
+        <%= link_to "see all", cocktails_path, class: "card-show-link"  %>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-<p><% end %></p>
-</div>
-</div>
-<%= link_to "add dose", new_cocktail_dose_path(@cocktail)  %>
-<%= link_to "See all drinks", cocktails_path  %>
 
 
 

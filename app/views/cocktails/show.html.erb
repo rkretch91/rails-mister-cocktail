@@ -1,7 +1,8 @@
-<% if @cocktail.photo? %>
-  <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
-<% end %>
-<h1><%= @cocktail.name %></h1>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.2) 50%), url('<%= @cocktail.photo? ? (cl_image_path @cocktail.photo.path, width: 500, height: 500, crop: :fill) : (image_tag 'coffee-placeholder.jpg') %>');">
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
 <p><% @cocktail.doses.each do |d| %></p>
 <p><%= d.description %></p>
 <p><%= d.ingredient.name %></p>
@@ -9,3 +10,6 @@
 <p><% end %></p>
 <%= link_to "add dose", new_cocktail_dose_path(@cocktail)  %>
 <%= link_to "See all drinks", cocktails_path  %>
+
+
+

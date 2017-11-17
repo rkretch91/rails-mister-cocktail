@@ -5,6 +5,8 @@
   background-position: center;
   color: white;
   position: relative;
+  margin: 10px 0;
+  border-radius: 15px 50px 30px;
 }
 .card-user {
   position: absolute;
@@ -22,8 +24,8 @@
 }
 .card-description {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 20px;
+  left: 20px;
 }
 .card-description h2 {
   font-size: 24px;

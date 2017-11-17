@@ -1,5 +1,5 @@
 .card-show {
-  height: 175px;
+  height: auto;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -41,6 +41,7 @@
 }
 
 .card-show h2 {
+  padding-top: 20px;
   text-align: center;
   color:#403233;
   text-shadow: none;
